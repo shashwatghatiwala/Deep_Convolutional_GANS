@@ -134,7 +134,7 @@ After constructing our convolution and deconvolution nets, we compute the losses
 discriminator and the generator. We use the loss functions that Ian Goodfellow introduces in his
 paper.
 
-![alt Results][https://github.com/shashwatghatiwala/Deep_Convolutional_GANS/blob/master/dcgan.gif)
+![][https://media.giphy.com/media/iiV6XdLAQAIkQoaT8r/giphy.gif]
 
 ## Conclusion
 
