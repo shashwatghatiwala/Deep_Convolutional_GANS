@@ -50,6 +50,8 @@ police attempting to detect the counterfeit samples. The driving intuition behin
 is that “competition in this game drives both teams to improve their methods until the
 counterfeits are indistinguishable from the genuine articles.” (Goodfellow et al.)
 
+![](https://github.com/shashwatghatiwala/Deep_Convolutional_GANS/blob/master/Model_Structure.png)
+
 In this framework, to learn the generator’s distribution pg over data x, the authors use an input noise variables pz(z) and then describe a mapping to the data space as G(z; θg), where G is a differentiable function represented by a multilayer perceptron with parameter θg. The second multilayer perceptron (discriminator model), D(x; θd) outputs a single scalar in which D(x) represents the probability that x came from the data and not pg. Finally, D is trained to maximize the probability of assigning the correct label to both training examples and samples from G. Simultaneously, G is trained to minimize log(1 − D(G(z))). Therefore, D and G play the following two-player minimax game with value function V (G, D) in which the global optimum of is at pg = pdata (Goodfellow et al.) 
 
 ## Types of GANS
