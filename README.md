@@ -98,6 +98,12 @@ The code has been heavily based on Tensorflow’s generative model tutorial and 
 Raval’s GitHub repository.
 Discriminator’s task is to distinguish fake images from real ones. 
 
+Layer | Shape | Activation Function
+---------- | ------------- | --------
+Convolution Layer | Batch Size, 64, 28, 28 | LeakyRELU
+Convolution Layer | Batch Size, 128, 14, 14 | LeakyRELU
+Dense | Batch Size, 512, 1, 1 | LeakyRELU
+
 The discriminator is taking a 28x28 grayscale image as its input and downsampling the
 image into feature maps which are then passed into an activation function. This process is one
 convolution layer. From the table above, we can see that this discriminator has two convolution
@@ -111,6 +117,12 @@ network and the end product is a probability whether the image is fake or real.
 Generator’s task, on the other hand, is to create convincing images that will fool the
 discriminator. For this, we construct a deconvolution net. As the term suggests, the structure of a
 deconvolution net is the inverse of a convolution net.
+
+Layer | Shape | Activation Function
+---------- | ------------- | --------
+Dense | Batch Size, 256, 7, 7 | LeakyRELU
+Convolution Layer | Batch Size, 128, 14, 14 | LeakyRELU
+Convolution Layer | Batch Size, 64, 28, 28 | LeakyRELU
 
 We start off with a one-dimensional vector with random values, call it, X. This vector
 undergoes a process of upsampling to create a 28 x 28 grayscale image.
