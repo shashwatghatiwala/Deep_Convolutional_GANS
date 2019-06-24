@@ -94,6 +94,8 @@ Since our task is to generate images, we use an Unconditional Deep Convolution G
 (DCGAN) model. This model consists of two parts - the discriminator and the generator.
 The discriminator is a Convolution Net while the generator is a De-Convolution Net.
 
+![](https://github.com/shashwatghatiwala/Deep_Convolutional_GANS/blob/master/pasted%20image%200.png)
+
 The code has been heavily based on Tensorflow’s generative model tutorial and Siraj
 Raval’s GitHub repository.
 Discriminator’s task is to distinguish fake images from real ones. 
@@ -134,9 +136,22 @@ After constructing our convolution and deconvolution nets, we compute the losses
 discriminator and the generator. We use the loss functions that Ian Goodfellow introduces in his
 paper.
 
+## Results
+
 ![](https://media.giphy.com/media/mAJkjO2qfYz1rS1RcJ/giphy.gif)
 
+In the above gif, we see that the generator has learnt to mimic a distribution similar to the original
+MNIST dataset without having access to it. The performance of the DCGAN began to stagnate at
+80-82 epochs, after which, the results at each epoch were minutely different.
+
 ![](https://media.giphy.com/media/iiV6XdLAQAIkQoaT8r/giphy.gif)
+
+In the above gif, we see that the generator has learnt to mimic a distribution similar to the
+original Fashion MNIST dataset without having access to it. The performance of the DCGAN
+began to stagnate at 400-420 epochs, after which, the results at each epoch were minutely
+different. It can be observed that the GAN learns to replicate objects that are similar to others in
+the dataset. For example, once the model became good at creating the boot, it was able to
+replicate other derivates like the shoe, sneakers etc. with relative ease.
 
 ## Conclusion
 
